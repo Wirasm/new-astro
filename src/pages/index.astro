@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.css";
+
+import { Button } from "@/components/ui/button";
+---
+
+<html lang="en">
+  <head>
+    <title>Astro</title>
+    <Layout title="Home Page">
+      <p>My page content, wrapped in a layout!</p>
+    </Layout>
+  </head><body>
+    <Button id="about" onclick="window.location.href = '/about.astro'"
+      >Hello World</Button
+    >
+    <script>
+      function handleClick() {
+        alert("Hello, Astro!");
+      }
+      const aboutButton = document.getElementById("about");
+      if (aboutButton) {
+        aboutButton.addEventListener("click", handleClick);
+      }
+    </script>
+  </body>
+</html>

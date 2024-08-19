@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.css";
+
+import { Button } from "@/components/ui/button";
+---
+
+<html lang="en">
+  <head>
+    <title>Astro</title>
+    <Layout title="About">
+      <p>My page content, wrapped in a layout!</p>
+    </Layout>
+  </head>
+  <body>
+    <Button href="/">About</Button>
+  </body>
+</html>
